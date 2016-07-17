@@ -14,7 +14,7 @@ Last modified: 2016-07-16
 #include "../src/math/matrix.h"
 
 int main() {
-  int num_epochs_pre = 100, num_epochs_fine = 500,
+  int num_epochs_pre = 400, num_epochs_fine = 500,
       idx_epoch;
   double lr_pre = 1e-3, lr_fine = 1e-0, cl = 1e-2, mt = 8e-1;
   Matrix x_train = {{0, 0}, {0, 1}, {1, 0}, {1, 1}},

@@ -11,12 +11,12 @@ Last modified: 2016-07-16
 #include "dA.h"
 #include "./math/matrix.h"
 #include "./math/utils.h"
-
-dA::dA(int num_vis, int num_hid) {
-  weight = Matrix(num_vis, num_hid, "uniform", -1.0, 1.0);
-  w_bias_vis = Matrix(1, num_vis, "uniform", -1.0, 1.0);
-  w_bias_hid = Matrix(1, num_hid, "uniform", -1.0, 1.0);
-}
+/*
+dA::dA(int num_vis, int num_hid) :
+  weight(Matrix(num_vis, num_hid, "uniform", -1.0, 1.0)),
+  w_bias_vis(Matrix(1, num_vis, "uniform", -1.0, 1.0)),
+  w_bias_hid(Matrix(1, num_hid, "uniform", -1.0, 1.0)) {
+}*/
 dA::dA(Matrix & weight_init, 
        const Matrix & w_bias_vis_init, 
        Matrix & w_bias_hid_init) :

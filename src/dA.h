@@ -16,7 +16,7 @@ Last modified: 2016-07-16
 class dA {
 public:
   dA() = default;
-  dA(int, int);
+  // dA(int, int);  // specificaly for sdA
   dA(Matrix &, const Matrix &, Matrix &);  // specificaly for sdA, const is omitted in order to share the weight
   dA(const dA &) = default;
   dA(dA &&) = default;
@@ -27,9 +27,9 @@ public:
   void train(const Matrix &, double, double);
   Matrix vis_to_hid(const Matrix &);  // specificaly for sdA, turn private to be public
 private:
-  Matrix weight;
+  Matrix & weight;  // specificaly for sdA
   Matrix w_bias_vis;
-  Matrix w_bias_hid;
+  Matrix & w_bias_hid;  // specificaly for sdA
   // Matrix vis_to_hid(const Matrix &);
   Matrix hid_to_vis(const Matrix &);
   Matrix corrupt(const Matrix &, double);

@@ -15,6 +15,7 @@ Last modified: 2016-07-15
 #include "../src/math/utils.h"
 
 int main() {
+  /*
   int num_epochs = 1000, idx_epoch, 
       num_vis = 8, 
       num_hid_1 = 6, num_hid_2 = 2, num_hid_3 = 6;
@@ -44,5 +45,6 @@ int main() {
   std::cout << encoder_1.reconstruct(data_test) << std::endl;
   std::cout << encoder_2.reconstruct(data_test) << std::endl;
   std::cout << encoder_3.reconstruct(data_test) << std::endl;
+  */
   return 0;
 }
